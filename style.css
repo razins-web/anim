@@ -1,0 +1,16 @@
+body {
+  background-color: grey;
+}
+
+.middle {
+  width: 1440px;
+  height: 400px;
+  background-color: red;
+}
+
+@media screen and (max-width:768px) {
+  .middle {
+    width: 500px;
+    background-color: green;
+  }
+}
