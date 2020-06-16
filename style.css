@@ -2,15 +2,58 @@ body {
   background-color: grey;
 }
 
+.toggle {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
 .middle {
-  width: 1440px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   background-color: red;
+  transition: height 2s, width 6s, background-color 4s;
+
+}
+
+.middle:hover{
+  height: 400px;
+  width: 1400px;
+  background-color: yellow;
 }
 
 @media screen and (max-width:768px) {
   .middle {
     width: 500px;
     background-color: green;
+  }
+}
+
+@keyframes color-block {
+  0%   {background-color:red; margin-left:0px; margin-top:0px;}
+  25%  {background-color:yellow; margin-left:200px; margin-top:0px;}
+  50%  {background-color:blue; margin-left:200px; margin-top:200px;}
+  75%  {background-color:green; margin-left:0px; margin-top:200px;}
+  100% {background-color:red; margin-left:0px; margin-top:0px;}
+}
+
+#animated:hover {
+}
+
+#animated {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  animation-name: color-block;
+  animation-duration: 5s;
+ animation-iteration-count: infinite;
+}
+
+@media (max-width: 758px;) {
+  .middle {
+    width: 500px;
+    background-color: yellow;
+    display: block;
   }
 }
